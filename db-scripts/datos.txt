@@ -1,0 +1,35 @@
+// Insertar productos
+db.productos.insertMany([
+  // Categoría: Teléfonos
+  { nombre: "iPhone 13", categoria: "Teléfonos", precioUnitario: 800000 },
+  { nombre: "Samsung Galaxy S21", categoria: "Teléfonos", precioUnitario: 700000 },
+  { nombre: "Xiaomi Mi 11", categoria: "Teléfonos", precioUnitario: 600000 },
+
+  // Categoría: Televisores
+  { nombre: "LG OLED 55'", categoria: "Televisores", precioUnitario: 120000 },
+  { nombre: "Samsung QLED 50'", categoria: "Televisores", precioUnitario: 100000 },
+  { nombre: "Sony Bravia 48'", categoria: "Televisores", precioUnitario: 250000 },
+
+  // Categoría: Computadoras
+  { nombre: "MacBook Pro 13", categoria: "Computadoras", precioUnitario: 1300000 },
+  { nombre: "Dell XPS 15", categoria: "Computadoras", precioUnitario: 900000 },
+  { nombre: "Lenovo ThinkPad X1", categoria: "Computadoras", precioUnitario: 750000 }
+]);
+
+// Insertar ventas
+db.ventas.insertMany([
+  // Ventas de Teléfonos
+  { productoId:ObjectId("655befce563765184b62bb57"), cantidad: 2, precioTotal: 1600000, fechaVenta: new Date(), vendedor: "Juan Pérez" },
+  { productoId: ObjectId("655befce563765184b62bb58"), cantidad: 1, precioTotal: 700000, fechaVenta: new Date(), vendedor: "Ana Gómez" },
+  { productoId: ObjectId("655befce563765184b62bb59"), cantidad: 3, precioTotal: 1800000, fechaVenta: new Date(), vendedor: "Carlos Ruiz" },
+
+  // Ventas de Televisores
+  { productoId: ObjectId("655befce563765184b62bb5a"), cantidad: 1, precioTotal: 120000, fechaVenta: new Date(), vendedor: "Laura Martínez" },
+  { productoId: ObjectId("655befce563765184b62bb5b"), cantidad: 2, precioTotal: 200000, fechaVenta: new Date(), vendedor: "Pedro Sánchez" },
+  { productoId: ObjectId("655befce563765184b62bb5c"), cantidad: 1, precioTotal: 250000, fechaVenta: new Date(), vendedor: "María López" },
+
+  // Ventas de Computadoras
+  { productoId: ObjectId("655befce563765184b62bb5d"), cantidad: 2, precioTotal: 2600000, fechaVenta: new Date(), vendedor: "Esteban Quito" },
+  { productoId: ObjectId("655befce563765184b62bb5e"), cantidad: 1, precioTotal: 900000, fechaVenta: new Date(), vendedor: "Isabel Castro" },
+  { productoId: ObjectId("655befce563765184b62bb5f"), cantidad: 1, precioTotal: 750000, fechaVenta: new Date(), vendedor: "Roberto Gómez" }
+]);
